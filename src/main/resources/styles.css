@@ -1,0 +1,107 @@
+
+
+
+
+.startButton
+{
+    -fx-background-color: #0061ff;
+}
+.stopButton
+{
+    -fx-background-color: rgb(215, 76, 50);
+}
+
+
+
+.jfx-slider-style
+{
+    -jfx-indicator-position: right;
+}
+
+.jfx-slider-style > .thumb
+{
+    -fx-background-color: #03a9f4;
+}
+
+.jfx-slider-style .track
+{
+    -fx-background-color: #ff5252;
+    -fx-pref-height: 5px;
+    -fx-pref-width: 5px;
+}
+
+.jfx-slider-style .sliderValue
+{
+    -fx-stroke: WHITE;
+    -fx-font-size: 10.0;
+}
+
+.buttonSecondary
+{
+    -fx-background-color: rgb(0, 188, 212);
+    -fx-text-fill: white;
+}
+
+.textfields
+{
+    -fx-background-color: white;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-color: rgb(180, 180, 180);
+    -fx-border-radius: 3;
+}
+
+.slider
+{
+
+    -fx-control-outer-color: red;
+}
+
+.slider .thumb
+{
+    -fx-background-color: #0061ff;
+}
+.slider .track
+{
+    -fx-background-color: transparent;
+}
+
+
+
+/* OLD */
+/*
+.buttonPrimary
+{
+    -fx-background-color: #0061ff;
+    -fx-text-fill: white;
+}
+.buttonPrimary:hover
+{
+    -fx-opacity: 0.7;
+}
+.buttonPrimary:pressed
+{
+    -fx-opacity: 0.3;
+}
+
+
+
+
+
+-fx-control-inner-background: rgb(0, 188, 212);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
