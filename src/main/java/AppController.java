@@ -48,14 +48,22 @@ public class AppController
                 this.startServer();
                 this.startButton.setText("PAUSE");
             }
+            else if (!this.server.isPaused)
+            {
+                this.startButton.setText("START");
+                this.server.isPaused = true;
+            }
             else
             {
-                this.server.isPaused = !this.server.isPaused;
-                if(this.server.isPaused)
-                    this.startButton.setText("START");
+                this.startButton.setText("PAUSE");
+                this.server.isPaused = false;
             }
         });
-        this.stopButton.setOnAction((event) -> this.server.stop());
+        this.stopButton.setOnAction((event) -> {
+            this.startButton.setText("START");
+            this.server.isPaused = false;
+            this.server.stop();
+        });
     }
 
     private void startServer()

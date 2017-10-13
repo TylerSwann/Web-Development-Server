@@ -47,7 +47,8 @@ class Server
         }));
 
         post("/updater", ((request, response) -> {
-            if(projectFilesWereChanged())
+            boolean changesDetected = projectFilesWereChanged();
+            if(changesDetected)
                 return "TRUE";
             else
                 return "FALSE";
@@ -86,8 +87,7 @@ class Server
 
     private boolean projectFilesWereChanged()
     {
-        if(this.isPaused)
-            return false;
+        if(this.isPaused){return false;}
         ArrayList<ProjectFile> updatedFiles = new ArrayList<>();
         this.projectFiles.forEach(projectFile -> {
             updatedFiles.add(new ProjectFile(projectFile.path));
@@ -126,6 +126,6 @@ class Server
                 }
             }
         }
-        catch(Exception ex){System.out.println(ex.getLocalizedMessage());}
+        catch(Exception ex){System.out.println("ERROR: " + ex.getLocalizedMessage());}
     }
 }
